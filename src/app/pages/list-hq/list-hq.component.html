@@ -1,10 +1,10 @@
-<div class="d-flex justify-content-center aling-items-center my-3">
+<!-- <div class="d-flex justify-content-center aling-items-center my-3">
     <div >
-        <input class="col-sm-11" type="search" placeholder="Pequise um hq">
+        <input [(ngModel)]="filter" class="form-control col-sm-11" type="search" placeholder="Pequise um quadrinho" style="width: 60rem;">
     </div>
-</div>
+</div> -->
 
-<div class="row">
+<div class="row mt-3">
     <div class="col-sm-3" *ngFor="let comic of allCommics | async">
         <app-comic [comic]="comic"></app-comic>
     </div>

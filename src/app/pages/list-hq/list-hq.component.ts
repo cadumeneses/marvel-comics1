@@ -28,9 +28,19 @@ export class ListHqComponent implements OnInit {
     this.allCommics = this.hqService.allCommics();
   }
 
-  set filter(value: string) {
-    this._filterBy = value;
-    this.filteredComics = this._comics.filter((comic: Hq) => comic.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1)
-  }
+  // teste(){
+  //   this.hqService.allCommics().subscribe({
+  //     next: comic => {
+  //      this._comics = comic;
+  //      this.filteredComics = this._comics; 
+  //     },
+  //     error: err => console.log('Error', err)
+  //   })
+  // }
+
+  // set filter(value: string) {
+  //   this._filterBy = value;
+  //   this.filteredComics = this._comics.filter((comic: any) => comic.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1)
+  // }
 
 }
