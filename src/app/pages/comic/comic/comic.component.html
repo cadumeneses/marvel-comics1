@@ -1,7 +1,10 @@
-<div>
-    <img src="{{ comic.thumbnail.path }}.{{ comic.thumbnail.extension }}" alt="{{ comic.name }}">
-    <h2>{{ comic.name }}</h2>
-    <div>
-        <a href="">Detalhes</a>
+<div class="d-flex justify-content-center aling-items-center">
+    <div class="card border-dark mb-3" style="width: 18rem;">
+        <img src="{{ comic.thumbnail.path }}.{{ comic.thumbnail.extension }}" class="card-img-top"
+            alt="{{ comic.name }}">
+        <div class="card-body">
+            <h5 class="card-title">{{ comic.title }}</h5>
+            <a href="#" class="btn btn-primary">Detalhes</a>
+        </div>
     </div>
 </div>
