@@ -16,7 +16,7 @@ export class HqService {
   constructor(private http: HttpClient) { }
 
   allCommics(): Observable<any> {
-    return this.http.get<any>(this.URL_API)
+    return this.http.get<any>(this.URL_API, {responseType: 'json'})
       .pipe(map((data: any) => data.data.results))
   }
   
