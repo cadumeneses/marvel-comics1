@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
 import { LayoutModule } from '@angular/cdk/layout'
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +24,7 @@ import { CoreModule } from 'src/app/modules/core.module';
     HttpClientModule,
     FlexLayoutModule,
     LayoutModule,
+    NgbModule,
     ListHqModule,
     CoreModule,
     RouterModule.forRoot([
