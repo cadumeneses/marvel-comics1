@@ -17,13 +17,17 @@
     <div class="modal-body">
         <img src="{{ comic.thumbnail.path }}.{{ comic.thumbnail.extension }}" alt="{{ comic.name }}" style="width:100% ;">
       <form>
-        <div class="mb-3">
-          <label for="dateOfBirth">Descrição:</label>
+        <div class="my-3">
+          <h5>Descrição:</h5>
           <p>{{ comic.description }}</p>
+          <h5>Personagens:</h5>
+          <ul *ngFor="let character of comic.characters.items">
+            <li>{{ character.name }}</li>
+          </ul>
         </div>
       </form>
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Voltar</button>
     </div>
 </ng-template>
