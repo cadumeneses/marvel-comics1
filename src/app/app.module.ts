@@ -12,6 +12,7 @@ import { ListHqModule } from './modules/list-hq.module';
 import { ModalComponent } from './componentes/modal/modal.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CoreModule } from 'src/app/modules/core.module';
+import { MapModule } from './modules/map.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { CoreModule } from 'src/app/modules/core.module';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    MapModule,
     FlexLayoutModule,
     LayoutModule,
     NgbModule,

@@ -1,0 +1,18 @@
+<mgl-map [style]="'mapbox://styles/mapbox/streets-v9'" [zoom]="[16.6]" [center]="[-75.7611979,45.3516]">
+
+    <mgl-geojson-source id="point">
+        <mgl-feature [properties]="" [geometry]="{
+            type: 'Point',
+            coordinates: [-75.7611979,45.3516]
+          }" [mglDraggable]="targetLayer" (featureDragStart)="onDragStart($event)" (featureDragEnd)="onDragEnd($event)"
+            (featureDrag)="onDrag($event)"></mgl-feature>
+    </mgl-geojson-source>
+    <mgl-layer #targetLayer id="point" type="circle" source="point" [paint]="layerPaint"
+        (layerMouseEnter)="changeColor('#3bb2d0')" (layerMouseLeave)="changeColor('#3887be')"></mgl-layer>
+    <mgl-control position="bottom-left">
+        <div>
+            <div>Longitude:&nbsp;{{ coordinates[0] }}</div>
+            <div>Latitude:&nbsp;{{ coordinates[1] }}</div>
+        </div>
+    </mgl-control>
+</mgl-map>
