@@ -31,7 +31,10 @@
               "src/styles.sass",
               "mapbox-gl/dist/mapbox-gl.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "allowedCommonJsDependencies": [
+              "mapbox-gl"
+            ]
           },
           "configurations": {
             "production": {
